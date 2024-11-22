@@ -1,0 +1,333 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: greenyellow;
+    color: #333;
+    font-family: 'Caudex', serif;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Header styles */
+header {
+    width: 100%;
+    height: 175px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    overflow: hidden;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 80%, 0% 100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Moving Effect on Scroll */
+header.moved {
+    transform: translateY(-20px);
+}
+
+/* Header Image */
+.header-image {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Hover Effect on Header */
+header:hover {
+    transform: translateY(-30px);
+}
+
+/* Header Navigation */
+header nav menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav menu li {
+    padding: 0 10px;
+}
+
+header nav menu li a {
+    text-decoration: none;
+    font-family: 'Barriecito', cursive;
+    color: greenyellow;
+
+    font-weight: 600;
+}
+
+/* Main content styles */
+main {
+    padding: 60px 20px;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section {
+    margin: 40px 0;
+}
+
+h1, h2 {
+
+    color: orangered;
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Styling for the heading*/
+.masthead-heading {
+    background-color: yellow;
+    font-family: 'Bungee Tint', 'Josefin Sans', 'Libre Baskerville', sans-serif;
+    font-size: 3em;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+    color: grey;
+}
+
+/* Footer Styling */
+footer {
+    background-color: orangered;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+}
+
+/* Footer Text */
+footer h6 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+/* Contact Section */
+.footer-contact p {
+    font-size: 1.1em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Contact Links Styling */
+.contact-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-links li {
+    margin-bottom: 10px;
+}
+
+.contact-links a {
+    color: dodgerblue;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* Button Styling */
+.action-btn {
+    background-color: darkorange;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+.action-btn:hover {
+    background-color: orangered;
+}
+
+.action-btn:active {
+    background-color: orange;
+}
+
+.action-btn:focus {
+    outline: none;
+}
+
+/* Product Images */
+.product-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Product Image Items */
+.product-item {
+    text-align: center;
+    width: 200px;
+    margin: 10px;
+}
+
+.product-img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+/* Video Section */
+.video-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.video-container iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Section Heading Slide-in Animations */
+.slide-right {
+    animation: slideRight 1s ease-out;
+}
+
+.slide-up {
+    animation: slideUp 1s ease-out;
+}
+
+@keyframes slideRight {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .product-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-item {
+        width: 80%;
+    }
+
+    .masthead-heading {
+        font-size: 2em;
+        padding: 15px;
+    }
+}
+/* Variety Section */
+.varieties-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: row;
+}
+
+/* Section item styling */
+.variety-item {
+    text-align: center;
+    width: 200px;
+    margin: 10px;
+}
+
+/* Image styling */
+.variety-img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Enlarge and add hover effect */
+.variety-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+.button-container {
+    position: fixed;
+    bottom: 20px;
+    left: 5%;
+    transform: translateX(-50%);
+}
+
+.svg-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.svg-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Bounce Effect on Hover */
+.svg-button:hover .svg-icon {
+    transform: scale(1.1);
+    animation: bounce 0.5s ease-out infinite;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    30% { transform: translateY(-10px); }
+    50% { transform: translateY(0); }
+    70% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+
